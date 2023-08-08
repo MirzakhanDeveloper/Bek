@@ -1,13 +1,18 @@
-﻿
-string[] fruits = new string[3];
-fruits[0] = Console.ReadLine();
-fruits[1] = Console.ReadLine();
-fruits[2] = Console.ReadLine();
-Console.WriteLine(fruits[0] +" "+ fruits[1] +" "+ fruits[2]);
-int[] id = {1,2,3,4};
-Console.WriteLine($"{id[0]}");
-string[] name = {"Jane","Kain","Barter","Jarry",};
-int a = id[0]+id[1];
-string b = name[0]+name[1];
-Console.WriteLine(a + b);
+﻿string[] studentName = new string[3];
+studentName[0] = "Mie";
+studentName[1] = "Garry";
+studentName[2] = "Mirzakhan";
+int[] sAge = {1,6,26};
+Console.WriteLine($"{studentName[0]} is {sAge[0]} years old."  );
+Console.WriteLine($"{studentName[1]} is {sAge[1]} years old."  );
+Console.WriteLine($"{studentName[2]} is {sAge[2]} years old."  );
 
+foreach(string sName in studentName)
+{
+    Console.WriteLine($"{sName} is the best of our company");
+}
+
+for (int i = 0; i < studentName.Length; i++)
+{
+    Console.WriteLine($"{studentName[i]} is {sAge[i]} years old");
+}
