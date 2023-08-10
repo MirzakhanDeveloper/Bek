@@ -83,20 +83,76 @@ Console.WriteLine($"Name :{ari.Name}\n ------------");
 
 // Did yo have got your flowers?
 
-Console.WriteLine("qolgan miqdor :");
 int qolganMiqdor = 4;
-Console.WriteLine("dastlabki miqdor:");
+Console.WriteLine($"Qolgan miqdor :{qolganMiqdor}");
 int dastlabkiMiqdor = 43;
-Flower flowerCount = new Flower(shunchaQoldi: qolganMiqdor,firstCount: dastlabkiMiqdor);
+Console.WriteLine($"Dastlabki miqdor:{dastlabkiMiqdor}");
+string placeJoy = "Namangan";
+Flower flowerCount = new Flower(shunchaQoldi: qolganMiqdor,firstCount: dastlabkiMiqdor, place: placeJoy );
 Console.WriteLine($"Hozirda mavjud :{flowerCount.resultDifference}");
 Console.WriteLine("--------------------------");
 // How much count ?
-Console.Write("Nomi: ");
-string turNomi = Console.ReadLine();
-Console.Write("Hozirgi miqdor :");
-int hozirgiMiqdor = Convert.ToInt32(Console.ReadLine());
+string turNomi = "Pomadoro";
+Console.WriteLine($"Nomi: {turNomi}");
+int hozirgiMiqdor = 3;
+Console.WriteLine($"Hozirgi miqdor :{hozirgiMiqdor}");
 int sotilganMiqdor = 1;
 Vegetable vegetableCountFirstly = new Vegetable(nomi:turNomi,miqdorHozirgi:hozirgiMiqdor, sotilgan: sotilganMiqdor );
-Console.WriteLine($"Oldingi miqdor : {vegetableCountFirstly.oldingiMiqdor}");
+Console.WriteLine($"Oldingi miqdor : {vegetableCountFirstly.resultVegetable}");
+Console.WriteLine("-----------------");
+
+// How much have got it all fruits?
+ string meva = "Mandarin";
+ Console.WriteLine($"Meva nomi :{meva}");
+ int narx = 6000;
+ Console.WriteLine($"Narxi :{narx}.so'm");
+ int miqdor = 3;
+ Console.WriteLine($"Miqdori:{miqdor}.kg ");
+ Console.WriteLine("--------------------");
+ Fruit mevalar = new Fruit(nomi:meva, narxi: narx, miqdori: miqdor);
+ Console.WriteLine($"Jami:{meva} | {narx}.0 so'm * {miqdor}.0 kg = {mevalar.result}");
+Console.WriteLine("--------------------");
+
+// Result all of the vegetable
+string sNomi = "Cucumber";
+Console.WriteLine($"Sabzavot nomi : {sNomi}");
+int hozirgiMiqdori = 35;
+Console.WriteLine($"Miqdori :{hozirgiMiqdori}.0 kg");
+int sotilganNarx = 2000;
+Console.WriteLine($"Narx : {sotilganNarx}.0 so'm ");
+
+Console.WriteLine("------------------");
+
+Vegetable sabzavotlar = new Vegetable(nomi:sNomi,miqdorHozirgi:hozirgiMiqdori,sotilgan:sotilganNarx );
+Console.WriteLine($"{sNomi} | {hozirgiMiqdori} * {sotilganNarx} = {sabzavotlar.resultVegetable}");
+Console.WriteLine("--------------------------");
+
+// Counting is flower.
+int qoldiGul = 17;
+Console.WriteLine($"Qolgan gullar: {qoldiGul}");
+int dastlabkiGul = 30;
+Console.WriteLine($"Dastlabki gullar: {dastlabkiGul}");
+string placeJoys = "Oltiariq";
+Console.WriteLine($"Joy :{placeJoys}");
+
+
+
+Console.WriteLine("-------------------");
+
+Flower gullar = new Flower(shunchaQoldi: qoldiGul, firstCount: dastlabkiGul,place: placeJoys );
+Console.WriteLine($"Hozirda qolgan gullar: {qoldiGul}|\n Shundan dastlabki gullar : {dastlabkiGul}\n  Jami :{gullar.resultDifference} ta mavjud");
+
+Console.WriteLine($"O'sgan joyi :{gullar.place}");
+Console.WriteLine("-------------------");
+
+int odamYoshi = 24;
+Console.WriteLine($"Odam yoshi :{odamYoshi}");
+int hayvonAge = 4;
+Console.WriteLine($"Hayvon yoshi :{hayvonAge}");
+string odamName = "Sardor";
+
+Animal hayvonlarAge = new Animal(myname: odamName,userage: odamYoshi, animalAge: hayvonAge);
+Console.WriteLine($"Odam yoshi:{odamYoshi} - Ismi: {odamName} | Hayvon yoshi :{hayvonAge} | Bir biridan farqi: {hayvonlarAge.AgeDifference}");
+
 
 

@@ -3,28 +3,39 @@
  
     class Fruit 
     {
-       public int price;
-
-       public string name;
-
-       public int quantity;
+         public int price;
+         public string name;
+         public int quantity;
+         public int result;
     
-    public Fruit()
-    {
-         price = 0;
+         public Fruit()
+        {
          name = "";
+         price = 0;
          quantity = 0;
+         result = 0;
+        }
 
-    }
-    public Fruit(int price, string name, int quantity)
-    {
-        this.price = price;
-        this.name = name;
-        this.quantity = quantity;
-    }
+        public Fruit (string nomi,int narxi, int miqdori )
+        {
+                Name = nomi;
+                Price = narxi;
+                Quantity = miqdori;
+                resultAllFruitsNoReturnValue(Price,Quantity);
+        }  
 
+        private int resultAllFruits(int Price, int Quantity)
+        {
+           return Price * Quantity;
+        }
 
-       public int Price 
+        private void resultAllFruitsNoReturnValue(int Price, int Quantity)
+        {
+            result = Price * Quantity;
+        }
+
+    
+         public int Price 
        { 
         get
         {
@@ -36,7 +47,7 @@
             price = value;
         } 
         }
-       public string Name 
+         public string Name 
        { 
         get
         {
@@ -48,7 +59,7 @@
             name = value;    
         } 
         }
-       public int Quantity
+         public int Quantity
         { 
             get
             {
@@ -67,16 +78,16 @@
          public int price;
          public string name;
          public int quantity;
-         public int oldingiMiqdor;
          public int sotilganMiqdor;
+         public int resultVegetable;
 
         public Vegetable()
         {
              name = "";
              price = 0;
              quantity = 1;
-             oldingiMiqdor = 0;
-             sotilganMiqdor = 0;
+             resultVegetable = 0;
+
         }
 
         public Vegetable (string nomi, int miqdorHozirgi, int sotilgan )
@@ -84,10 +95,19 @@
             Name = nomi;
             Quantity = miqdorHozirgi;
             sotilganMiqdor = sotilgan;
-            oldingiMiqdor = Quantity + sotilganMiqdor;
-
+            //resultVegetable = oldingiMiqdor(Quantity,sotilganMiqdor);
+            oldingiMiqdorNoReturn(Quantity,sotilganMiqdor);
         }
 
+        private int oldingiMiqdor(int Quantity, int sotilganMiqdor)
+        {
+            return Quantity * sotilganMiqdor;
+        }
+
+        private void oldingiMiqdorNoReturn(int Quantity,int sotilganMiqdor)
+        {
+            resultVegetable = Quantity * sotilganMiqdor;
+        }
 
 
 
@@ -151,11 +171,22 @@
 
             }
 
-            public Flower (int shunchaQoldi, int firstCount)
+            public Flower (int shunchaQoldi, int firstCount,string place)
             {
                 qoldi = shunchaQoldi;
-                resultDifference = firstCount - shunchaQoldi;
+                resultDifferenceCount(shunchaQoldi, firstCount);
+                placeFlower(place);
             }
+
+            private  void resultDifferenceCount (int shunchaQoldi, int firstCount) 
+            {
+                resultDifference = firstCount-shunchaQoldi;
+            }
+            private void placeFlower(string placeBorn)
+            {
+                place = placeBorn;
+            }
+
 
         public int Price 
         {
@@ -208,27 +239,34 @@
 
     class Animal
     {
-                public int quantity;
-                public string name;
-                public string place;
-                public int age;
-                public int AgeDifference;
+            public int quantity;
+            public string name;
+            public string place;
+            public int age;
+            public int AgeDifference;
 
-public Animal()
-{
-    name = "";
-    place = "";
-    age = 0;
-    quantity = 0;
-    AgeDifference = 0;
-}
+            public Animal()
+            {
+                name = "";
+                place = "";
+                age = 0;
+                quantity = 0;
+                AgeDifference = 0;
+            }
 
-public Animal(string myname,int userage, int animalAge)
-{
-    Name = myname;
-    Age = animalAge;
-    AgeDifference = userage - animalAge;
-}
+            public Animal(string myname,int userage, int animalAge)
+            {
+                 Name = myname;
+                 Age = animalAge;
+                 AgeDifference = AnimalAgeDifference(Age,userage);
+            }
+
+            private int AnimalAgeDifference(int Age, int userage)
+            {
+                return userage - Age;
+            }
+
+
 
         public int Quantity 
         {
