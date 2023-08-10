@@ -76,7 +76,18 @@ Animal bear = new ()
 Console.WriteLine($"Name (Flower) : {flower.Name} \n Price : {flower.Price} \n Quantity : {flower.Quantity} \n Place :{flower.Place}\n-------");
 Console.WriteLine($"Name (Animal) : {bear.Name} \n Quantity : {bear.Quantity} \n Place :{bear.Place} \n Age :{bear.Age}");
 
+int Age = 6;
+Animal ari = new Animal(myname:"Mirzomddin",userage: Age, animalAge: 2);
+Console.WriteLine($"Age diiderence :{ari.AgeDifference}");
+Console.WriteLine($"Name :{ari.Name}\n ------------");
 
+// Did yo have got your flowers?
 
+Console.WriteLine("qolgan miqdor :");
+int qolganMiqdor = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("dastlabki miqdor:");
+int dastlabkiMiqdor = Convert.ToInt32(Console.ReadLine());
+Flower flowerCount = new Flower(shunchaQoldi: qolganMiqdor,firstCount: dastlabkiMiqdor);
+Console.WriteLine($"Hozirda mavjud :{flowerCount.resultDifference}");
 
 

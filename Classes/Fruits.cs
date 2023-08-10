@@ -115,6 +115,9 @@
             public string name;
             public int quantity;
             public string place;
+            public int qoldi;
+            public int resultDifference;
+            public int firstCount;
 
             public Flower()
             {
@@ -122,6 +125,16 @@
                 place = "";
                 price = 0;
                 quantity = 0;
+                qoldi = 0;
+                resultDifference = 0;
+                firstCount = 0;
+
+            }
+
+            public Flower (int shunchaQoldi, int firstCount)
+            {
+                qoldi = shunchaQoldi;
+                resultDifference = firstCount - shunchaQoldi;
             }
 
         public int Price 
@@ -179,6 +192,7 @@
                 public string name;
                 public string place;
                 public int age;
+                public int AgeDifference;
 
 public Animal()
 {
@@ -186,9 +200,15 @@ public Animal()
     place = "";
     age = 0;
     quantity = 0;
+    AgeDifference = 0;
 }
 
-
+public Animal(string myname,int userage, int animalAge)
+{
+    Name = myname;
+    Age = animalAge;
+    AgeDifference = userage - animalAge;
+}
 
         public int Quantity 
         {
