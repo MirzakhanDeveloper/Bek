@@ -1,6 +1,6 @@
-namespace BEK.Classes
-
-{
+   namespace BEK.Classes
+{ 
+ 
     class Fruit 
     {
        public int price;
@@ -9,6 +9,21 @@ namespace BEK.Classes
 
        public int quantity;
     
+    public Fruit()
+    {
+         price = 0;
+         name = "";
+         quantity = 0;
+
+    }
+    public Fruit(int price, string name, int quantity)
+    {
+        this.price = price;
+        this.name = name;
+        this.quantity = quantity;
+    }
+
+
        public int Price 
        { 
         get
@@ -52,6 +67,11 @@ namespace BEK.Classes
         public int price;
         public string name;
         public int quantity;
+
+        public Vegetable()
+        {
+            name = "";
+        }
         public int Price  
         { 
             get
@@ -95,6 +115,14 @@ namespace BEK.Classes
             public string name;
             public int quantity;
             public string place;
+
+            public Flower()
+            {
+                name = "";
+                place = "";
+                price = 0;
+                quantity = 0;
+            }
 
         public int Price 
         {
@@ -151,6 +179,16 @@ namespace BEK.Classes
                 public string name;
                 public string place;
                 public int age;
+
+public Animal()
+{
+    name = "";
+    place = "";
+    age = 0;
+    quantity = 0;
+}
+
+
 
         public int Quantity 
         {
