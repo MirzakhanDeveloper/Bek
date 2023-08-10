@@ -64,14 +64,34 @@
 
     class Vegetable
     {
-        public int price;
-        public string name;
-        public int quantity;
+         public int price;
+         public string name;
+         public int quantity;
+         public int oldingiMiqdor;
+         public int sotilganMiqdor;
 
         public Vegetable()
         {
-            name = "";
+             name = "";
+             price = 0;
+             quantity = 1;
+             oldingiMiqdor = 0;
+             sotilganMiqdor = 0;
         }
+
+        public Vegetable (string nomi, int miqdorHozirgi, int sotilgan )
+        {
+            Name = nomi;
+            Quantity = miqdorHozirgi;
+            sotilganMiqdor = sotilgan;
+            oldingiMiqdor = Quantity + sotilganMiqdor;
+
+        }
+
+
+
+
+
         public int Price  
         { 
             get

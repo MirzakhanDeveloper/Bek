@@ -84,10 +84,19 @@ Console.WriteLine($"Name :{ari.Name}\n ------------");
 // Did yo have got your flowers?
 
 Console.WriteLine("qolgan miqdor :");
-int qolganMiqdor = Convert.ToInt32(Console.ReadLine());
+int qolganMiqdor = 4;
 Console.WriteLine("dastlabki miqdor:");
-int dastlabkiMiqdor = Convert.ToInt32(Console.ReadLine());
+int dastlabkiMiqdor = 43;
 Flower flowerCount = new Flower(shunchaQoldi: qolganMiqdor,firstCount: dastlabkiMiqdor);
 Console.WriteLine($"Hozirda mavjud :{flowerCount.resultDifference}");
+Console.WriteLine("--------------------------");
+// How much count ?
+Console.Write("Nomi: ");
+string turNomi = Console.ReadLine();
+Console.Write("Hozirgi miqdor :");
+int hozirgiMiqdor = Convert.ToInt32(Console.ReadLine());
+int sotilganMiqdor = 1;
+Vegetable vegetableCountFirstly = new Vegetable(nomi:turNomi,miqdorHozirgi:hozirgiMiqdor, sotilgan: sotilganMiqdor );
+Console.WriteLine($"Oldingi miqdor : {vegetableCountFirstly.oldingiMiqdor}");
 
 
